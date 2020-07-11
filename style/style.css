@@ -1,0 +1,45 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'din';
+  src: url('../assets/fonts/DIN-reg.otf');
+  /*src: url('../fonts/DIN-reg.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/DIN-reg.woff2') format('woff2'),
+       url('../fonts/DIN-reg.woff') format('woff'),
+       url('../fonts/DIN-reg.ttf') format('truetype'),
+       url('../fonts/DIN-reg.svg') format('svg');*/
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* General */
+
+* {
+
+/* Variables 
+/* Using: var(--cor-bg-principal); */ 
+  --dark: #000;
+  --light: #FFF;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x:hidden;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark);
+    padding: 64px;
+}
+
+h1 {
+  font-family: din;
+  font-size: 64px;
+  color: var(--light);
+  letter-spacing: 0.8px;
+  margin: 0;
+}
+
+#keyboard {
+  display: flex;
+}
