@@ -5,7 +5,7 @@ with no need to buy a super expensive instrument.
 Hope you enjoy it,
 Let's rock.
 
-nataliamedina.io/cristofori
+http://nataliamedina.io/cristofori
 
 
 ## A brief history of piano
