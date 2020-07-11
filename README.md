@@ -20,7 +20,11 @@ The instrument was actually first named "clavicembalo col piano e forte"
 
 This was shortened to the now common name, "piano."
 
-### For more details:
+### For more details
 https://www.yamaha.com/en/musical_instrument_guide/piano/
 
-Thanks (:
+## Special thanks
+Special thanks for @keithwhor who made the audiosynth.js, core of my application & 
+Joe Liang for the bootcamp tutorial: https://www.freecodecamp.org/news/javascript-piano-keyboard/#step1 
+
+Thanks! (:
