@@ -5,6 +5,8 @@ with no need to buy a super expensive instrument.
 Hope you enjoy it,
 Let's rock.
 
+nataliamedina.io/cristofori
+
 
 ## A brief history of piano
 The piano was invented by Bartolomeo Cristofori (1655-1731) of Italy.
