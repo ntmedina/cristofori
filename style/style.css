@@ -54,8 +54,13 @@ p {
   opacity: 0.5;
 }
 
-#keyboard {
-  display: flex;
+#keyboard-container{
+  width: 100%;
   position: absolute;
   bottom: 0;
+}
+
+#keyboard {
+  width: 1640px !important;
+  display: flex;
 }

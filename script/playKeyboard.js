@@ -1,6 +1,6 @@
 function playKeyboard(){
 
-	let pressColor = '#5F01D0'; //color when key is pressed
+	let pressColor = '#FDBD2F'; //color when key is pressed
 
 
 	var isMobile = !!navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i);
@@ -221,7 +221,7 @@ function playKeyboard(){
 				var thisKey = document.createElement('div');
 				if(n.length>1) { //adding sharp sign makes 2 characters
 					thisKey.className = 'black key'; //2 classes
-					thisKey.style.width = '50px';
+					thisKey.style.width = '40px';
 					thisKey.style.height = '250px';
 					thisKey.style.color = '#fff';
 					thisKey.style.backgroundColor = '#111';
@@ -229,7 +229,7 @@ function playKeyboard(){
 					thisKey.style.left = (40 * (iWhite - 1)) + 25 + 'px';
 				} else {
 					thisKey.className = 'white key';
-					thisKey.style.width = '100px';
+					thisKey.style.width = '80px';
 					thisKey.style.height = '250px';
 					thisKey.style.color = '#000';
 					thisKey.style.fontFamily = "din";
@@ -277,7 +277,7 @@ function playKeyboard(){
 			if(visualKeyboard[keyboard[e.keyCode]]) {
 				visualKeyboard[keyboard[e.keyCode]].style.backgroundColor = pressColor;
 				//visualKeyboard[keyboard[e.keyCode]].classList.add('playing'); //adding class only affects keypress and not mouse click
-				visualKeyboard[keyboard[e.keyCode]].style.marginTop = '5px';
+				// visualKeyboard[keyboard[e.keyCode]].style.marginTop = '0px';
 				visualKeyboard[keyboard[e.keyCode]].style.boxShadow = 'none';
 			}
 			var arrPlayNote = keyboard[e.keyCode].split(',');
