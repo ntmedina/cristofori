@@ -1,6 +1,6 @@
 function playKeyboard(){
 
-	let pressColor = '#fff'; //color when key is pressed
+	let pressColor = '#5F01D0'; //color when key is pressed
 
 
 	var isMobile = !!navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i);
@@ -221,13 +221,19 @@ function playKeyboard(){
 				var thisKey = document.createElement('div');
 				if(n.length>1) { //adding sharp sign makes 2 characters
 					thisKey.className = 'black key'; //2 classes
-					thisKey.style.width = '30px';
-					thisKey.style.height = '120px';
+					thisKey.style.width = '50px';
+					thisKey.style.height = '250px';
+					thisKey.style.color = '#fff';
+					thisKey.style.backgroundColor = '#111';
+					thisKey.style.fontFamily = "din";
 					thisKey.style.left = (40 * (iWhite - 1)) + 25 + 'px';
 				} else {
 					thisKey.className = 'white key';
-					thisKey.style.width = '40px';
-					thisKey.style.height = '200px';
+					thisKey.style.width = '100px';
+					thisKey.style.height = '250px';
+					thisKey.style.color = '#000';
+					thisKey.style.fontFamily = "din";
+					thisKey.style.backgroundColor = '#fff';
 					thisKey.style.left = 40 * iWhite + 'px';
 					iWhite++;
 				}
