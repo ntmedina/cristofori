@@ -16,10 +16,11 @@
 
 * {
 
-/* Variables 
-/* Using: var(--cor-bg-principal); */ 
+/* Variables
+/* Using: var(--cor-bg-principal); */
   --dark: #000;
   --light: #FFF;
+  --press: #FDBD2F;
 }
 
 body {
@@ -64,6 +65,27 @@ p {
 #keyboard {
   width: 1640px !important;
   display: flex;
+}
+
+.key {
+  font-family: 'din';
+  height: 250px;
+}
+
+.key.black {
+  width: 40px;
+  color: #FFF;
+  background-color: #111;
+}
+
+.key.white {
+  width: 80px;
+  color: #000;
+  background-color: #FFF;
+}
+
+.key.playing {
+  background-color: var(--press);
 }
 
 .label {

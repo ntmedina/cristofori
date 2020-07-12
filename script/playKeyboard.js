@@ -1,19 +1,16 @@
 function playKeyboard(){
 
-	let pressColor = '#FDBD2F'; //color when key is pressed
-
-
 	var isMobile = !!navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i);
 	if(isMobile) { var evtListener = ['touchstart', 'touchend']; } else { var evtListener = ['mousedown', 'mouseup']; }
 
 	var __audioSynth = new AudioSynth();
 	__audioSynth.setVolume(0.5);
 	var __octave = 4; //sets position of middle C, normally the 4th octave
-	
+
 
 	// Key bindings, notes to keyCodes.
 	var keyboard = {
-			
+
 			/* ~ */
 			192: 'C,-2',
 
@@ -121,7 +118,7 @@ function playKeyboard(){
 
 			/* " */
 			222: 'B,0',
-			
+
 
 			/* Z */
 			90: 'C,1',
@@ -158,31 +155,31 @@ function playKeyboard(){
 
 			/* -> */
 			39: 'B,1',
-		
+
 		};
-	
+
 	var reverseLookupText = {};
 	var reverseLookup = {};
 
 	// Create a reverse lookup table.
 	for(var i in keyboard) {
-	
+
 		var val;
 
 		switch(i|0) { //some characters don't display like they are supposed to, so need correct values
-		
+
 			case 187: //equal sign
 				val = 61; //???
 				break;
-			
+
 			case 219: //open bracket
 				val = 91; //left window key
 				break;
-			
+
 			case 221: //close bracket
 				val = 93; //select key
 				break;
-			
+
 			case 188://comma
 				val = 44; //print screen
 				break;
@@ -190,16 +187,16 @@ function playKeyboard(){
 			case 190: //period
 				val = 46; //delete
 				break;
-			
+
 			default:
 				val = i;
 				break;
-			
+
 		}
-	
+
 		reverseLookupText[keyboard[i]] = val;
 		reverseLookup[keyboard[i]] = i;
-	
+
 	}
 
 	// Keys you have pressed down.
@@ -221,19 +218,9 @@ function playKeyboard(){
 				var thisKey = document.createElement('div');
 				if(n.length>1) { //adding sharp sign makes 2 characters
 					thisKey.className = 'black key'; //2 classes
-					thisKey.style.width = '40px';
-					thisKey.style.height = '250px';
-					thisKey.style.color = '#fff';
-					thisKey.style.backgroundColor = '#111';
-					thisKey.style.fontFamily = "din";
 					thisKey.style.left = (40 * (iWhite - 1)) + 25 + 'px';
 				} else {
 					thisKey.className = 'white key';
-					thisKey.style.width = '80px';
-					thisKey.style.height = '250px';
-					thisKey.style.color = '#000';
-					thisKey.style.fontFamily = "din";
-					thisKey.style.backgroundColor = '#fff';
 					thisKey.style.left = 40 * iWhite + 'px';
 					iWhite++;
 				}
@@ -258,53 +245,46 @@ function playKeyboard(){
 	visualKeyboard.style.width = iWhite * 40 + 'px';
 
 	window.addEventListener(evtListener[1], function() { n = keysPressed.length; while(n--) { fnRemoveKeyBinding({keyCode:keysPressed[n]}); } });
-	
+
 
 // Detect keypresses, play notes.
 
 	var fnPlayKeyboard = function(e) {
-	
+
 		var i = keysPressed.length;
 		while(i--) {
 			if(keysPressed[i]==e.keyCode) {
-				return false;	
+				return false;
 			}
 		}
 		keysPressed.push(e.keyCode);
 
 		if(keyboard[e.keyCode]) {
 			if(visualKeyboard[keyboard[e.keyCode]]) {
-				visualKeyboard[keyboard[e.keyCode]].style.backgroundColor = pressColor;
-				//visualKeyboard[keyboard[e.keyCode]].classList.add('playing'); //adding class only affects keypress and not mouse click
-				// visualKeyboard[keyboard[e.keyCode]].style.marginTop = '0px';
-				visualKeyboard[keyboard[e.keyCode]].style.boxShadow = 'none';
+        visualKeyboard[keyboard[e.keyCode]].classList.add('playing');
 			}
 			var arrPlayNote = keyboard[e.keyCode].split(',');
 			var note = arrPlayNote[0];
 			var octaveModifier = arrPlayNote[1]|0;
 			fnPlayNote(note, __octave + octaveModifier);
 		} else {
-			return false;	
+			return false;
 		}
-	
+
 	}
 	// Remove key bindings once note is done.
 	var fnRemoveKeyBinding = function(e) {
-	
+
 		var i = keysPressed.length;
 		while(i--) {
 			if(keysPressed[i]==e.keyCode) {
 				if(visualKeyboard[keyboard[e.keyCode]]) {
-					//visualKeyboard[keyboard[e.keyCode]].classList.remove('playing');
-					visualKeyboard[keyboard[e.keyCode]].style.backgroundColor = '';
-					visualKeyboard[keyboard[e.keyCode]].style.color = '';
-					visualKeyboard[keyboard[e.keyCode]].style.marginTop = '';
-					visualKeyboard[keyboard[e.keyCode]].style.boxShadow = 'none';
+          visualKeyboard[keyboard[e.keyCode]].classList.remove('playing');
 				}
 				keysPressed.splice(i, 1);
 			}
 		}
-	
+
 	}
 	// Generates audio for pressed note and returns that to be played
 	var fnPlayNote = function(note, octave) {
@@ -317,7 +297,7 @@ function playKeyboard(){
 		container.setAttribute('type', 'audio/wav');
 		container.load();
 		return container;
-	
+
 	};
 
 	//returns correct string for display
