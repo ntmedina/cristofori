@@ -187,10 +187,8 @@ function playKeyboard(){
 				var thisKey = document.createElement('div');
 				if(n.length>1) { //adding sharp sign makes 2 characters
 					thisKey.className = 'black key'; //2 classes
-					thisKey.style.left = (40 * (iWhite - 1)) + 25 + 'px';
 				} else {
 					thisKey.className = 'white key';
-					thisKey.style.left = 40 * iWhite + 'px';
 					iWhite++;
 				}
 
