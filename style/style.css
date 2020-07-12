@@ -49,6 +49,10 @@ p {
   line-height: 24px;
 }
 
+#header {
+  padding: 64px;
+}
+
 #subtitle{
   padding: 12px 0;
   opacity: 0.5;
