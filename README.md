@@ -15,7 +15,9 @@ This was shortened to the now common name: "Piano".
 https://www.yamaha.com/en/musical_instrument_guide/piano/
 
 ## Special thanks
-Special thanks for @keithwhor who made the audiosynth.js, core of my application & 
-Joe Liang for the bootcamp tutorial: https://www.freecodecamp.org/news/javascript-piano-keyboard/#step1 
+Special thanks for 
+@keithwhor who made the audiosynth.js core of my application,  
+Joe Liang for the bootcamp tutorial: https://www.freecodecamp.org/news/javascript-piano-keyboard/#step1,
+and @leocamelo who helped me fix those trick crazy bugs <3 
 
-Thanks! (:
+Thank you! (:
