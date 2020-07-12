@@ -250,7 +250,6 @@ function playKeyboard(){
 				thisKey.addEventListener(evtListener[0], (function(_temp) { return function() { fnPlayKeyboard({keyCode:_temp}); } })(reverseLookup[n + ',' + i]));
 				visualKeyboard[n + ',' + i] = thisKey;
 				visualKeyboard.appendChild(thisKey);
-				
 				iKeys++;
 			}
 		}
@@ -298,8 +297,9 @@ function playKeyboard(){
 				if(visualKeyboard[keyboard[e.keyCode]]) {
 					//visualKeyboard[keyboard[e.keyCode]].classList.remove('playing');
 					visualKeyboard[keyboard[e.keyCode]].style.backgroundColor = '';
+					visualKeyboard[keyboard[e.keyCode]].style.color = '';
 					visualKeyboard[keyboard[e.keyCode]].style.marginTop = '';
-					visualKeyboard[keyboard[e.keyCode]].style.boxShadow = '';
+					visualKeyboard[keyboard[e.keyCode]].style.boxShadow = 'none';
 				}
 				keysPressed.splice(i, 1);
 			}

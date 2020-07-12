@@ -58,9 +58,14 @@ p {
   width: 100%;
   position: absolute;
   bottom: 0;
+  overflow-y: scroll;
 }
 
 #keyboard {
   width: 1640px !important;
   display: flex;
+}
+
+.label {
+  text-align: center;
 }
