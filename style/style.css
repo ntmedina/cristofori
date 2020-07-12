@@ -41,9 +41,7 @@ h1 {
 }
 
 p {
-  width: 320px;
   font-family: din;
-  font-style: thin;
   font-size: 16px;
   color: var(--light);
   margin: 0;
@@ -51,12 +49,25 @@ p {
   letter-spacing: 0.5px;
 }
 
-#header {
+nav{
+  display: flex;
   padding: 64px;
+  justify-content: space-between;
+}
+
+#github {
+  font-family: din;
+  font-size: 16px;
+  color: #fff;
+}
+
+#github:hover {
+  opacity: 0.5;
 }
 
 #subtitle{
   padding: 12px 0;
+  width: 320px;
 }
 
 #keyboard-container{
