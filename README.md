@@ -11,7 +11,7 @@ level of the harpsichord. He is credited for switching out the plucking mechanis
 The instrument was actually first named "clavicembalo col piano e forte" (literally, a harpsichord that can play soft and loud noises). 
 This was shortened to the now common name: "Piano".
 
-### For more details
+#### For more details
 https://www.yamaha.com/en/musical_instrument_guide/piano/
 
 ## Special thanks
