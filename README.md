@@ -4,7 +4,7 @@ with no need to buy a super expensive instrument. Hope you enjoy it, Let's rock!
 http://nataliamedina.io/cristofori
 
 
-## A brief history of piano
+## A brief history of Piano & Cristofori
 The piano was invented by Bartolomeo Cristofori (1655-1731) of Italy. Cristofori was unsatisfied by the lack of control that musicians had over the volume 
 level of the harpsichord. He is credited for switching out the plucking mechanism with a hammer to create the modern piano in around the year 1700.
 
